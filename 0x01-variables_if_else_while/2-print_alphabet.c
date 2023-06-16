@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
  * main - prints out the lower case alphabets
- * Return - 0 if successful else 1
+ * Return: 0 if successful else 1
  */
 
 int main(void)
