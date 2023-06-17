@@ -10,7 +10,7 @@ int main(void)
 
 	for (nu = 0; nu < 10; nu++)
 	{
-		printf("%d\n", nu);
+		printf("%d", nu);
 	}
 
 	return (0);
