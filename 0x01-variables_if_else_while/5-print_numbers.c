@@ -13,5 +13,7 @@ int main(void)
 		printf("%d", nu);
 	}
 
+	printf('\n');
+
 	return (0);
 }
