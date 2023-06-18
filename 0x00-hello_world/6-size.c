@@ -1,6 +1,6 @@
 # include <stdio.h>
 /**
- * main: size of various types on the computer it is compiled and run on.
+ * main- size of various types on the computer it is compiled and run on.
  * You should produce the exact same output as in the example
  * Warnings are allowed
  * install the package libc6-dev-i386 on your Linux to test the -m32 gcc option
