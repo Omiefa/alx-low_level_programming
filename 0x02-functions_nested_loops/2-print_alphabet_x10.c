@@ -1,6 +1,6 @@
 # include "main.h"
 /**
- * main- prints 10 times the alphabet, in lowercase, followed by a new line\
+ * main- prints 10 times the alphabet, in lowercase, followed by a new line
  *
  * Return: always 0
  */
