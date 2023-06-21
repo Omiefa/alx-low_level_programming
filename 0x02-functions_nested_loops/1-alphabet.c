@@ -1,7 +1,7 @@
-# include "main.h"
+#include "main.h"
 
 /**
- * main- Prints the alphabets in lowercase
+ * main: prints the alphabets in lowercase
  *
  * Return: always 0 for success
  */
