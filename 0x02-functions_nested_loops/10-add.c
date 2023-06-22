@@ -1,16 +1,12 @@
 # include "main.h"
 /**
  *add- prints the sum of two integers
- *@i: integer input
- *@j: integer input
+ *@i: input integer
+ *@j: input integer
  *Return: always 0
  */
 int add(int i, int j)
 {
+	return (i + j);
 
-	int r = i + j;
-	_putchar(r);
-	_putchar('\n');
-
-	return (r);
 }
