@@ -17,17 +17,20 @@ int main(void)
 			printf("FizzBuzz ");
 			continue;
 		}
-		if (z % 5 == 0)
+		else if (z % 5 == 0)
 		{
 			printf("Buzz ");
 			continue;
 		}
-		if (z % 3 == 0)
+		else if (z % 3 == 0)
 		{
 			printf("Fizz ");
 			continue;
 		}
-		printf("%d ", z);
+		else
+		{
+			printf("%d ", z);
+		}
 	}
 	return (0);
 }
