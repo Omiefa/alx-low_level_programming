@@ -1,39 +1,28 @@
-#include <ctype.h>
-#include <stdlib.h>
 #include <stdio.h>
-
+#include <stdlib.h>
+#include <ctype.h>
 /**
- * main - adds positive numbers
- *
- * @argc: argument counter
- * @argv: argument vector
- *
- * Return: 1 for ERROR such as symbols and 0 if nothing is passed,
+ * main - add positive numbers
+ * @argc: number of command line arg..
+ * @argv: array that contains the program command line arg
+ * Return: (0)
  */
-
 int main(int argc, char *argv[])
 {
-	int n, m;
-	int i = 0;
+	int a, b, result = 0;
 
-	if (argc < 2)
+	for (a = 1; a < argc; a++)
 	{
-		printf("0\n");
-		return (0);
-	}
-
-	for (n = 1; n < argc; n++)
-	{
-		for (m = 0; argv[n][m] != '\0'; m++)
+		for (b = 0; argv[a][b] != '\0'; b++)
 		{
-			if (argv[n][m] < '0' || argv[n][m] > '9')
+			if (!isdigit(argv[a][b]))
 			{
 				printf("Error\n");
 				return (1);
 			}
 		}
-		i += atoi(argv[i]);
+		result += atoi(argv[a]);
 	}
-	printf("%d\n", i);
+	printf("%d\n", result);
 	return (0);
 }
