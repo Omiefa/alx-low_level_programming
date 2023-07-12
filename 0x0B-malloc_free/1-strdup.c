@@ -20,20 +20,29 @@ char *_strdup(char *str)
 		str_length++;
 	}
 
-	/* Allocate memory using malloc */
-	ptString = malloc(str_length * sizeof(char) + 1);
-
-	if (str == NULL || ptString == NULL)
+	if (str == NULL)
 	{
 		return (NULL);
 	}
 
-	/* copy the given string to a new location */
-	for (i = 0; i < str_length; i++)
+	else
 	{
-		ptString[i] = str[i];
+
+		/* Allocate memory using malloc */
+		ptString = malloc(str_length * sizeof(char) + 1);
+
+		if (ptString == NULL)
+		{
+			return (NULL);
+		}
+
+		/* copy the given string to a new location */
+		for (i = 0; i < str_length; i++)
+		{
+			ptString[i] = str[i];
+		}
+		ptString[i] = '\0';
 	}
-	ptString[i] = '\0';
 
 	return (ptString);
 }
