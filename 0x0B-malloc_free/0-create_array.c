@@ -24,7 +24,7 @@ char *create_array(unsigned int size, char c)
 
 		if (ptr == NULL)
 		{
-			return NULL;
+			return (NULL);
 		}
 		for (count = 0; count < size; count++)
 		{
