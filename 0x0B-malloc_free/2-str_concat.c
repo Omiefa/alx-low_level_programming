@@ -13,10 +13,10 @@ char *str_concat(char *s1, char *s2)
 	int s1_length = 0;
 	int s2_length = 0;
 
-	if (s1 == NULL && s2 == NULL)
-	{
-		return (NULL);
-	}
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
 	while (s1[s1_length] != '\0')/* counts the length of s1 */
 	{
 		s1_length++;
