@@ -29,7 +29,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	/*carry out memory set to 0*/
 	for (index = 0; index < total_size; index++)
 	{
-		*((char*)ptr_call + index) = 0;
+		*((char *)ptr_call + index) = 0;
 	}
 
 	return (ptr_call);
