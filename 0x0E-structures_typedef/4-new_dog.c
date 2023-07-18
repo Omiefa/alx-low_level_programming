@@ -11,15 +11,16 @@ int _strlen(char *s)
 {
 	int index;
 
-	for (index = 0; s[index] != '\0'; index++)
+	while (s[index] != '\0')
+	{
+		index++;
+	}
 
 	return (index);
 }
 
 /**
  * *_strcpy - copies the string pointed to by src
- * including the terminating null byte (\0)
- * to the buffer pointed to by dest
  * @dest: pointer to the buffer in which we copy the string
  * @src: string to be copied
  *
@@ -40,7 +41,7 @@ char *_strcpy(char *dest, char *src)
 	{
 		dest[counter] = src[counter];
 	}
-	dest[i] = '\0';
+	dest[counter] = '\0';
 
 	return (dest);
 }
