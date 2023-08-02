@@ -15,7 +15,6 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	{
 		return (NULL);
 	}
-
 	else
 	{
 		while (i < idx)
@@ -31,4 +30,18 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		temp1->next = temp;
 	}
 	return (temp);
+}
+/* listint_len- prints the number of elements in a linked listint_t list*/
+size_t listint_len(const listint_t *head)
+{
+	size_t count;
+	const listint_t *current = head;
+
+	count = 0;
+	while (current != NULL)
+	{
+		current = current->next;
+		count += 1;
+	}
+	return (count);
 }
