@@ -9,39 +9,32 @@
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
 	listint_t *temp, *temp1 = *head;
-	unsigned int i = 1, len = listint_len(*head);
+	unsigned int i;
 
-	if (idx > len)
-	{
+	temp = (listint_t *)malloc(sizeof(listint_t));
+
+	if (temp == NULL)
 		return (NULL);
-	}
-	else
-	{
-		while (i < idx)
-		{
-			temp1 = temp1->next;
-			i++;
-		}
-		temp = (listint_t *)malloc(sizeof(listint_t));
-		if (temp == NULL)
-			return (NULL);
-		temp->n = n;
-		temp->next = temp1->next;
-		temp1->next = temp;
-	}
-	return (temp);
-}
-/* listint_len- prints the number of elements in a linked listint_t list*/
-size_t listint_len(const listint_t *head)
-{
-	size_t count;
-	const listint_t *current = head;
 
-	count = 0;
-	while (current != NULL)
+	temp->n = n;
+
+	if (idx == 0)
 	{
-		current = current->next;
-		count += 1;
+		temp->next = temp1;
+		*head = temp;
+		return (temp);
 	}
-	return (count);
+
+	for (i = 1; i < idx; i++)
+	{
+		if (temp1 == NULL || temp1->next == NULL)
+		return (NULL);
+
+		temp1 = temp1->next;
+	}
+
+	temp->next = temp1->next;
+	temp1->next = temp;
+
+	return (temp);
 }
