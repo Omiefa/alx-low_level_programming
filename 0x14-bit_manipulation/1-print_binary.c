@@ -1,10 +1,10 @@
 #include "main.h"
 
-/** print_binary-function that prints the binary representation of
-  a number
-  * @n: the given number a base order than base 2
-  * Return: the binary equivalent of the give number
-  */
+/**
+ * print_binary- function that prints the binary representation of a number
+ * @n: the given number a base order than base 2
+ * Return: the binary equivalent of the give number
+ */
 
 void print_binary(unsigned long int n)
 {
