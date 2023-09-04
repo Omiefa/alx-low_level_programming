@@ -16,7 +16,7 @@ int main(int ac, char *av[])
 
 	if (ac != 3)
 	{
-		dprintf(STDERR_FILENO, "%s\n", "Usage: cp file_fromvfile_to");
+		dprintf(STDERR_FILENO, "%s\n", "Usage: cp file_from file_to");
 		exit(97);
 	}
 	file_from = open(av[1], O_RDONLY);
@@ -26,7 +26,7 @@ int main(int ac, char *av[])
 	num_chars = 1024;
 	while (num_chars == 1024)
 	{
-		num_chars = read(file_from, buffer, num_chars);
+		num_chars = read(file_from, buffer, 1024);
 		if (num_chars == -1)
 			error_file(-1, 0, av);
 		new = write(file_to, buffer, num_chars);
