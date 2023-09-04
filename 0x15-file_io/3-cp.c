@@ -30,7 +30,7 @@ int main(int ac, char *av[])
 		if (num_chars == -1)
 			error_file(-1, 0, av);
 		new = write(file_to, buffer, num_chars);
-		if (new == -1)
+			if (new == -1)
 			error_file(0, -1, av);
 	}
 
