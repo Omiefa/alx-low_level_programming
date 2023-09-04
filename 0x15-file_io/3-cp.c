@@ -26,7 +26,7 @@ int main(int ac, char *av[])
 	num_chars = 1024;
 	while (num_chars == 1024)
 	{
-		num_chars = read(file_from, buffer, 1024);
+		num_chars = read(file_from, buffer, num_chars);
 		if (num_chars == -1)
 			error_file(-1, 0, av);
 		new = write(file_to, buffer, num_chars);
